@@ -1,0 +1,387 @@
+body{
+    font-weight: 400;
+    font-family: sans, sf pro text, -apple-system, BlinkMacSystemFont, Roboto,
+    segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* css for navbar */
+
+.navbar{
+    height: 75px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.udemy{
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+.logo-toggle{
+    display: none;
+}
+
+.logo span {
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+.search-icon{
+    margin-left: 5px;
+    padding: 0px 10px;
+}
+
+.category{
+    margin-left: 30px;
+}
+.category:hover{
+    color: #5022c3;
+}
+
+.searchlink{
+    background-color : #f7f9fa;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 50%;
+    display: inherit;
+    align-items: center;
+}
+
+input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 12px 10px;
+    width: 100%;
+}
+.udemybusiness {
+    position: inherit;
+    margin-left: 10px;
+}
+
+.udemybusiness:hover{
+    color: #5022c3;
+}
+
+.udemy-teach:hover{
+    color: #5022c3;
+}
+
+.udemy-teach{
+    margin-left: 5px;
+}
+.account{
+    position: absolute;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    /* border: 2px solid red; */
+    height: 37px;
+}
+span a{
+    text-decoration: none;
+}
+.login{
+    background-color: transparent;
+    padding: 10px 18px 10px 18px;
+    border: 1px solid black;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.login a{
+    color: black;
+}
+#cart{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#cart:hover{
+    background: url("icons/shopping-cart-hover.png")  no-repeat;
+}
+.signup{
+    background-color: #1c1d1f;
+    padding: 10px 18px 10px 18px;
+    border: 1px solid black;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.signup a{
+    color: white;
+}
+
+.signup:hover{
+    background-color: black;
+}
+#lang{
+    padding: 6px 5px 4px 5px;
+    border: 1px solid black;
+}
+.login:hover, #lang:hover{
+    background-color: #f7f9fa;
+}
+/* End of css navbar */
+
+/* header after navbar */
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2px 112px;
+    font-size: 	12.8px;
+    background-color: #f8f9fb;
+}
+
+.headernav{
+    padding-bottom: 12.8px;
+    padding-left: 11.2px;
+    margin-top: -160px;
+    background-color: white;
+    height: 30%;
+    width: 30%;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.headerphoto{
+    width: 640px;
+}
+
+.New-to-udemy{
+    font-family: serif;
+    font-size: 40px;
+}
+
+
+/* End of CSS header after navbar */
+
+/* Courses */
+.Courses{
+padding: 25px;
+}
+
+.Courses-list-above{
+display: flex;
+flex-wrap: wrap;
+}
+
+.title-above{
+    padding-left: 50px;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 45px;
+    margin: 0;
+
+}
+
+.paragraph-after-title{
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-left: 50px;
+}
+
+.Courses-list-above .listOfCourses{
+font-family: sans-serif;
+font-weight: bold;
+padding:10px;
+color: gray;
+}
+
+.active{
+color: black !important;
+}
+
+.Courses-view{
+font-family: sans-serif;
+border: 1px solid rgb(187, 187, 187);
+padding: 10px;
+}
+
+.header-of-Courses-view{
+width:55%;
+}
+
+.header-of-Courses-view div{
+padding: 10px;
+}
+
+.header-of-Courses-view .title{
+font-size: 25px;
+font-weight: bold;
+}
+
+.header-of-Courses-view .details{
+color: gray
+}
+
+.Explore-button{
+font-weight: bold;
+padding:10px;
+margin: 10px 0;
+cursor: pointer;
+border:1px solid black;
+background-color: white;
+color:black;
+}
+
+.first-course{
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+
+}
+
+.card-img img{
+width:100%;
+border:1px solid rgb(214, 214, 214);
+}
+
+.card{
+margin:0 5px;
+width:249px;
+}
+
+.card-info div{
+padding:5px 0 0 0;
+font-weight: bold;
+}
+
+.card-info .card-title{
+padding:10px 0 0 0;
+}
+
+.card-info .card-auther{
+font-size: 15px;
+color:gray;
+font-weight: 100;
+}
+
+.checked {
+color: #f4c150;
+}
+
+.students {
+color: gray;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+li {
+list-style: none;
+}
+
+/* End of courses css */
+
+/* media query */
+
+@media screen and (max-width: 1600px){
+    #lang{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .signup{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1300px) {
+    .login{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1100px) {
+    #cart{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1080px) {
+    .udemy-teach{
+        display: none;
+    }
+
+    .header{
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .headernav{
+        box-shadow: 0 0;
+        width: 100%;
+        margin-top: 0px;
+    }
+    
+}
+
+@media screen and (max-width: 750px) {
+    .udemybusiness{
+        display: none;
+    }
+
+    .headerphoto{
+        width: 100px;
+    }
+
+    .headernav{
+        width: 70%;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px) {
+.category{
+    display: none;
+}
+.account{
+    display: none;
+}
+
+.udemybusiness{
+    display: none;
+}
+
+.udemy-teach{
+    display: none;
+}
+
+#cart{
+    display: none;
+}
+
+}
+
+@media screen and (max-width: 500px){
+    .udemy{
+        margin-left: 370px;
+    }
+
+    .searchlink{
+        display: none;
+    }    
+        
+}
+
