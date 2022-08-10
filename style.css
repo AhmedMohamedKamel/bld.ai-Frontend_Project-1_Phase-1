@@ -291,9 +291,10 @@ list-style: none;
 /* media query */
 
 @media screen and (max-width: 1600px){
-    #lang{
+    #lang {
         display: none;
     }
+
 }
 
 @media screen and (max-width: 1500px) {
@@ -375,13 +376,20 @@ list-style: none;
 }
 
 @media screen and (max-width: 500px){
-    .udemy{
-        margin-left: 370px;
-    }
 
     .searchlink{
         display: none;
-    }    
+    }   
+    
+    .logo-toggle{
+        display: flex;
+        position: relative;
+        right: 220px;
+    }
+
+    .udemy{
+        position: relative;
+        left: 360px;
+    }
         
 }
-
