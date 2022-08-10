@@ -375,12 +375,16 @@ list-style: none;
 
 }
 
-@media screen and (max-width: 300px){
+@media screen and (max-width: 500px){
 
     .searchlink{
         display: none;
-    }   
-    
+    }  
+        
+}
+
+@media screen and (max-width: 400px){
+
     .logo-toggle{
         display: flex;
         position: relative;
