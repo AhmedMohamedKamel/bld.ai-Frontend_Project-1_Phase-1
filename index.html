@@ -3,45 +3,57 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"/>
     <title>Online Courses - Learn Anything, On Your Schedule | Udemy</title>
     <link type="image/x-icon" rel="icon" href="icons/udemyicon.png" /> 
 </head>
-<body>
-        <div class="navbar">
-            <div class="udemy">
-                <div class="logo">
-                    <span><a href="index.html"><img src="icons/logo-udemy.svg" alt="Udemy Logo" width="91" height="34"/></a></span>
-                </div>
-                <div>
-                    <span class="category">Category</span>
-                </div>
-            </div>
-            <div class="udemy-toggle">
-                <div class="logo-toggle">
-                    <span><a href="#"><img src="icons/menu.png" alt="Udemy toggle" width="30" height="30"/></a></span>
-                </div>
-            </div>
-            <div class="searchlink">
-                
-                <img class="search-icon" src="icons/search.png" alt="Search Logo" width="20" height="19"/>
-                <input type="search" placeholder="Search for anything">
-            </div>
-            <div>
-                <span class="udemybusiness">Udemy Business</span>
-            </div>
-            <div>
-                <span class="udemy-teach">Teach on Udemy</span>
-            </div>
-            <span id="cart"><a href="#"><img src="icons/shopping-cart.png" alt="shopping-cart" width="25" height="25"/></a></span>
-            <div class="account">
-                <span class="login"><a href="#">Log in</a></span>
-                <span class="signup"><a href="#">Sign up</a></span>
-                <span id="lang"><a href="#"><img src="icons/language.png" alt="language icon"/></a></span>
-            </div>
+    <body>
+      <nav>
+        <div class="span hidden">
+            <a href="#"><i class="fa fa-bars fa-lg"></i></a>
         </div>
+        <div class="icon udemy">
+            <a href="index.html"><img src="icons/logo-udemy.svg" class="logo" width="91" height="34" alt="Udemy Logo"></a>
+        </div>
+        <div class="span shown category">
+            <a href="#" id="category">Categories</a></div>
+        <div class="form shown">
+            <form>
+            <button type="submit"><i class="fa fa-search search"></i></button>  
+            <input type="text" name="course" placeholder="Search for anything."/>  
+            </form>
+        </div>
+        <div class="span shown1">
+            <a href="#" id="Udemy-business">Udemy Business</a>
+        </div>
+        <div class="span shown2">
+            <a href="#" id="teach">Teach on Udemy</a>
+        </div>
+        <div class="span hidden">
+            <a href="#"><i class="fa fa-search search" style="color: black"></i></a>
+        </div>
+        <div class="icon cart">
+            <a href="#"><img src="icons/shopping-cart.png" alt="shopping cart" class="shopping-cart" width="25" height="25"/></a>
+        </div>  
+        <div class="icon shown log">
+            <a href="#"><button class="login">Log in</button></a>
+        </div> 
+        <div class="icon shown log">
+            <a href="#"><button class="login black">Sign up</button>
+            </a>
+        </div> 
+        <div class="icon shown lang">
+            <a href="#">
+            <button class="login language" style="width: 40px;padding-top: 4px;">
+              <span id="lang"><a href="#"><img src="icons/language.png" alt="language icon"/></a></span>
+            </button>
+            </a>
+        </div>      
+        
+    </nav>
 
         <header class="header">
             <div class="headernav">
@@ -86,7 +98,7 @@
               <div class="first-course">
                 <div class="card">
                   <div class="card-img">
-                    <a href="#"><img src="courses/python-course1.png" alt="python" /></a>
+                    <a href="#"><img src="/courses/python-course1.png" alt="python" /></a>
                   </div>
                   <div class="card-info">
                     <div class="card-title">
