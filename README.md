@@ -10,5 +10,6 @@ You can see the live version of this project from [here](https://ahmedmohamedkam
 - Updating the index.html and style.css files to taking effect with the index.js
 
 Before running the Phase 2:
-Run Commands: Start npm
-json-server -w db.json
+Run Commands: *Start npm*
+
+*json-server -w db.json*
