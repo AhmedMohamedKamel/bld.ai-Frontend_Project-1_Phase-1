@@ -4,9 +4,15 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css"/>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <title>Online Courses - Learn Anything, On Your Schedule | Udemy</title>
     <link type="image/x-icon" rel="icon" href="icons/udemyicon.png" /> 
 </head>
@@ -18,12 +24,12 @@
         <div class="icon udemy">
             <a href="index.html"><img src="icons/logo-udemy.svg" class="logo" width="91" height="34" alt="Udemy Logo"></a>
         </div>
-        <div class="span shown category">
+        <div class="span shown">
             <a href="#" id="category">Categories</a></div>
         <div class="form shown">
             <form>
-            <button type="submit"><i class="fa fa-search search"></i></button>  
-            <input type="text" name="course" placeholder="Search for anything." id="searchInput"/>  
+            <button  id="search-button" type="submit"><i class="fa fa-search search"></i></button>  
+            <input  id="search-input" type="text" name="course" placeholder="Search for anything." id="searchInput"/>  
             </form>
         </div>
         <div class="span shown1">
@@ -55,50 +61,350 @@
         
     </nav>
 
-        <header class="header">
-            <div class="headernav">
-              <h1 class="New-to-udemy">New to Udemy? Lucky you.</h1>
+        <header class="header top">
+            <div class="headernav above">
+              <h1 class="New-to-udemy inside">New to Udemy? Lucky you.</h1>
               <h2 class="after-news">
                 Courses start at E£169.99.Get your new-student offer befort it
                 expires.
               </h2>
             </div>
-            <img class="headerphoto" src="images/alarm.png" alt="alarm" />
+            <img class="headerphoto side" src="images/alarm.png" alt="alarm" />
         </header>
 
 
-        <section class="Courses">
-            <h1 class="title-above">A broad selection of courses</h1>
-            <p class="paragraph-after-title">
-            Choose from 185,000 online video courseswith new additions published
-            every month
-            </p>
-            <ul class="Courses-list-above">
-              <li class="listOfCourses active"><a href="#">Python</a></li>
-              <li class="listOfCourses"><a href="#">Excel</a></li>
-              <li class="listOfCourses"><a href="#">Web Development</a></li>
-              <li class="listOfCourses"><a href="#">JavaScript</a></li>
-              <li class="listOfCourses"><a href="#">Data Science</a></li>
-              <li class="listOfCourses"><a href="#">AWS Certificate</a></li>
-              <li class="listOfCourses"><a href="#">Drawing</a></li>
-            </ul>
-            <div class="Courses-view">
-              <div class="header-of-Courses-view">
-                <div class="title">Expand your career opportunities with Python</div>
-                <div class="details">
-                  Take one of Udemy's range of python courses and learn how to code
-                  using this incredibly useful language.its simple syntax and
-                  readability makes python perfect for Flask, Django, data Science,
-                  and machine learning. You'll learn how to build everything from
-                  games to websites to apps. Choose from a range of courses that
-                  appeal to...
+          <section class="selection-courses">
+              <h1 class="title-above">A broad selection of courses</h1>
+              <p class="paragraph-after-title">
+              Choose from 185,000 online video courseswith new additions published
+              every month
+              </p>
+              <!-- <ul class="Courses-list-above" id="Courses-list-above">
+                <li class="listOfCourses active active-tab" id="python"><a href="#">Python</a></li>
+                <li class="listOfCourses" id="Excel" ><a href="#">Excel</a></li>
+                <li class="listOfCourses" id="WebDev"><a href="#">Web Development</a></li>
+                <li class="listOfCourses" id="javaScript" ><a href="#">JavaScript</a></li>
+                <li class="listOfCourses" id="dataScience" ><a href="#">Data Science</a></li>
+                <li class="listOfCourses" id="AWS"><a href="#">AWS Certificate</a></li>
+                <li class="listOfCourses" id="draw"><a href="#">Drawing</a></li>
+              </ul> 
+              <div class="Courses-view">
+                <div class="header-of-Courses-view">
+                  <div class="title tab-heading">Expand your career opportunities with Python</div>
+                  <div class="details description">
+                    Take one of Udemy's range of python courses and learn how to code
+                    using this incredibly useful language.its simple syntax and
+                    readability makes python perfect for Flask, Django, data Science,
+                    and machine learning. You'll learn how to build everything from
+                    games to websites to apps. Choose from a range of courses that
+                    appeal to...
+                  </div>
                 </div>
+                <button type="button" class="Explore-button explore" id="Explore-button">Explore python</button>
+                
+                <div class="first-course">
+                </div> 
+
+            
+
+              </div> -->
+
+              
+
+              <!-- new featured-courses with carousal -->
+            <!-- <div class="featured-courses">
+              <ul class="nav nav-tabs" id="featured-courses-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-dark active" id="python-tab" data-bs-toggle="tab" data-bs-target="#python-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Python</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-dark" id="Excel-tab" data-bs-toggle="tab" data-bs-target="#Excel-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Excel</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-dark" id="Web-tab" data-bs-toggle="tab" data-bs-target="#Web-tab-pane" type="button" role="tab" aria-controls="Web-tab-pane" aria-selected="false">Web Development</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-dark" id="Js-tab" data-bs-toggle="tab" data-bs-target="#Js-tab-pane" type="button" role="tab" aria-controls="Js-tab-pane" aria-selected="true">JavaScript</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-dark" id="DS-tab" data-bs-toggle="tab" data-bs-target="#DS-tab-pane" type="button" role="tab" aria-controls="DS-tab-pane" aria-selected="false">Data Science</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-dark" id="AWS-tab" data-bs-toggle="tab" data-bs-target="#AWS-tab-pane" type="button" role="tab" aria-controls="AWS-tab-pane" aria-selected="false">AWS Certificate</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-dark" id="Drawing-tab" data-bs-toggle="tab" data-bs-target="#Drawing-tab-pane" type="button" role="tab" aria-controls="Drawing-tab-pane" aria-selected="false">Drawing</button>
+                </li>
+                
+              </ul>
+
+              <div class="tab-content" id="featured-courses-contents">
+                <div class="tab-pane fade show active" id="python-tab-pane" role="tabpanel" aria-labelledby="python-tab" tabindex="0">
+                  
+                  <div class="tab-pane-content">
+                    <p>Expand your career opportunities with Python</p>
+                    <div class="details">
+                      Take one of Udemy's range of python courses and learn how to code
+                      using this incredibly useful language.its simple syntax and
+                      readability makes python perfect for Flask, Django, data Science,
+                      and machine learning. You'll learn how to build everything from
+                      games to websites to apps. Choose from a range of courses that
+                      appeal to...
+                    </div>
+                    <button type="button" class="Explore-button" id="Explore-button">Explore python</button>
+
+                                        
+                    <div class="carousel-cards">
+                      <div id="featured-courses-python" class="featured-courses-python carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          
+                          
+                          
+                          <div class="carousel-item active">
+                            <div class="col-md-3">
+                              <div class="course-card">
+                                <div class="course-image">
+                                  <img src="https://img-c.udemycdn.com/course/240x135/394676_ce3d_5.jpg" alt="...">
+                                </div>
+                                <div class="course-body">
+                                  <div class="course-title">Learn Python: The Complete Python Programming Course</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3">
+                              <div class="course-card">
+                                <div class="course-image">
+                                  <img src="https://img-c.udemycdn.com/course/240x135/396876_cc92_7.jpg" alt="...">
+                                </div>
+                                <div class="course-body">
+                                  <div class="course-title">Learning Python for Data Analysis and Visualization</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-3">
+                              <div class="course-card">
+                                <div class="course-image">
+                                  <img src="https://img-c.udemycdn.com/course/240x135/405878_e5a0_3.jpg" alt="...">
+                                </div>
+                                <div class="course-body">
+                                  <div class="course-title">Python for Beginners - Learn Programming from scratch</div>
+                                </div>
+                              </div>
+                            </div> 
+
+                          </div>
+
+
+                          <div class="carousel-item"><img src="https://img-c.udemycdn.com/course/240x135/405878_e5a0_3.jpg" alt="..."></div>
+                          <div class="carousel-item"><img src="https://img-c.udemycdn.com/course/240x135/426570_1b91_3.jpg" alt="..."></div>
+                          <div class="carousel-item"><img src="https://img-c.udemycdn.com/course/240x135/449532_2aa9_7.jpg" alt="..."></div>
+                          <div class="carousel-item"><img src="https://img-c.udemycdn.com/course/240x135/482754_7146_6.jpg" alt="..."></div>
+                          <div class="carousel-item"><img src="https://img-c.udemycdn.com/course/240x135/519554_da68_6.jpg" alt="..."></div>
+                          <div class="carousel-item"><img src="https://img-c.udemycdn.com/course/240x135/535622_3bc0.jpg" alt="..."></div>
+                          <div class="carousel-item"><img src="https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg" alt="..."></div>
+                          <div class="carousel-item"><img src="https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg" alt="..."></div>
+
+                        </div>
+
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="Excel-tab-pane" role="tabpanel" aria-labelledby="Excel-tab" tabindex="0">
+                  
+                  <div class="tab-pane-content">
+                    <p>Analyze and visualize data with Excel</p>
+                    <div class="details">
+                      Take a Microsoft Excel course from Udemy, and learn how to use this industry-standard software.
+                      Real-world experts will show you the basics like how to organize data into sheets, rows and columns,
+                      and advanced techniques like creating complex dynamic formulas.
+                      Both small businesses and large companies use Excel to...
+                    </div>
+                    <button type="button" class="Explore-button" id="Explore-button">Explore Excel</button>
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="Web-tab-pane" role="tabpanel" aria-labelledby="Web-tab" tabindex="0">
+                  
+                  <div class="tab-pane-content">
+                    <p>Build websites and applications with Web Development</p>
+                    <div class="details">
+                    The world of web development is as wide as the internet itself. Much of our social and vocational lives play out on the internet, 
+                    which prompts new industries aimed at creating, managing, and debugging the websites and applications that we increasingly rely on...
+                    </div>
+                    <button type="button" class="Explore-button" id="Explore-button">Explore Web Development</button>
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="Js-tab-pane" role="tabpanel" aria-labelledby="Js-tab" tabindex="0">
+                  
+                  <div class="tab-pane-content">
+                    <p>Grow your software development skills with JavaScript</p>
+                    <div class="details">
+                      JavaScript is a text-based computer programming language used to make dynamic web pages. 
+                      A must-learn for aspiring web developers or programmers, JavaScript can be used for features like image carousels, displaying countdowns and timers, 
+                      and playing media on a webpage. With JavaScript online classes, 
+                      you can learn to build interactive web applications, choose the best framework, and work with other programming languages like HTML and CSS...
+                    </div>
+                    <button type="button" class="Explore-button" id="Explore-button">Explore JavaScript</button>
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="DS-tab-pane" role="tabpanel" aria-labelledby="DS-tab" tabindex="0">
+                  
+                  <div class="tab-pane-content">
+                    <p>Lead data-driven decisions with Data Science</p>
+                    <div class="details">
+                      Data science application is an in-demand skill in many industries worldwide — including finance, transportation, education, manufacturing, human resources, 
+                      and banking. Explore data science courses with Python, statistics, machine learning, 
+                      and more to grow your knowledge. Get data science training if you’re into research, statistics, and analytics...
+                    </div>
+                    <button type="button" class="Explore-button" id="Explore-button">Explore Data Science</button>
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="AWS-tab-pane" role="tabpanel" aria-labelledby="AWS-tab" tabindex="0">
+                  
+                  <div class="tab-pane-content">
+                    <p>Become an expert in cloud computing with AWS Certification</p>
+                    <div class="details">
+                      Prep for your AWS certification with an AWS course on Udemy. Learn the fundamentals of AWS such as working with a serverless platform, 
+                      the various frameworks, security and more. With these courses, you’ll build the valuable skills you need to implement cloud initiatives — 
+                      and open up new career opportunities. If you want to become an AWS developer, we’ve got the course for you...
+                    </div>
+                    <button type="button" class="Explore-button" id="Explore-button">Explore AWS Certification</button>
+                  </div>
+
+
+                </div>
+                <div class="tab-pane fade" id="Drawing-tab-pane" role="tabpanel" aria-labelledby="Drawing-tab" tabindex="0">
+                  
+                  <div class="tab-pane-content">
+                    <p>Expand your creative skillset with Drawing</p>
+                    <div class="details">
+                      Want to start drawing for fun or take your craft to the next level? Explore our online drawing classes and learn pencil drawing, 
+                      figure drawing, cartoon drawing, character drawing for cartoons and anime, illustration, sketching, shading and more. 
+                      Take an overview course on the fundamentals of drawing or zero in on an area you’d like to improve with a specialized course. 
+                      We’ve got tons of options to get — and keep — you going...
+                    </div>
+                    <button type="button" class="Explore-button" id="Explore-button">Explore AWS Certification</button>
+                  </div>
+
+
+                </div>
+                
               </div>
-              <button type="button" class="Explore-button">Explore python</button>
-              <div class="first-course">
+
+            </div> -->
+          </section>
+
+          <main class="main">
+            
+            <section class="courses">
+                <div class="topics">
+    
+                    <button class="topic-button topic-button-active" id="btn-python"><span>Python</span></button>
+                    <button class="topic-button" id="btn-excel"><span>Excel</span></button>
+                    <button class="topic-button" id="btn-web"><span>Web Development</span></button>
+                    <button class="topic-button" id="btn-java"><span>Javascript</span></button>
+                    <button class="topic-button" id="btn-data"><span>Data Science</span></button>
+                    <button class="topic-button" id="btn-aws"><span>AWS Certification</span></button>
+                    <button class="topic-button" id="btn-drawing"><span>Drawing</span></button>
+                </div>
+                <div class="courses-content">
+                    <div class="courses-content-head">
+                        <h2></h2>
+                        <p></p>
+                        <a class="gnrl-btn" href="./index.html">Explore Python</a>
+                    </div>
+                    <div class=" carousel " data-interval="false" id="carouselExampleControls">
+                        <div class="carousel-inner" data-bs-slide-to="4" id="courses-carousel">
+    
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                    </div>
+    
+    
+            </section>
+            <section class="categories">
+                
+                <div class="container">
+                    <div class="row justify-content-center justify-content-md-start" id="cat">
+    
+    
+                    </div>
+                </div>
+            </section>
+        </main>
+          
+        <section>
+          <div class="container">
+            <h2>Top Categories</h2>
+
+            <div class="categories-section">
+              <div class="category">
+                <div class="category-img">
+                  <img src="categories/Design.jpg" alt="Design"></div>
+                <div class="category-title">Design</div>
+              </div>
+              <div class="category">
+                <div class="category-img"><img src="categories/Programming.jpg" alt="Programming"></div>
+                <div class="category-title">Programming</div>
+              </div>
+              <div class="category">
+                <div class="category-img"><img src="categories/Marketing.jpg" alt="Marketing"></div>
+                <div class="category-title">Marketing</div>
+              </div>
+              <div class="category">
+                <div class="category-img"><img src="categories/IT and Software.jpg" alt="IT and Software"></div>
+                <div class="category-title">IT and Software</div>
+              </div>
+              <div class="category">
+                <div class="category-img"><img src="categories/Photography.jpg" alt="Photography"></div>
+                <div class="category-title">Photography</div>
+              </div>
+              <div class="category">
+                <div class="category-img"><img src="categories/Music.jpg" alt="Music"></div>
+                <div class="category-title">Music</div>
+              </div>
+              <div class="category">
+                <div class="category-img"><img src="categories/Personal Development.jpg" alt="Personal Development"></div>
+                <div class="category-title">Personal Development</div>
+              </div>
+              <div class="category">
+                <div class="category-img"><img src="categories/Business.jpg" alt="Business"></div>
+                <div class="category-title">Business</div>
               </div>
             </div>
-          </section>
-          <script src="/index.js"></script>
+          </div> -->
+
+
+        </section>          
+          
+          <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+          <script src="script.js"></script>
+
+
 </body>
 </html>
