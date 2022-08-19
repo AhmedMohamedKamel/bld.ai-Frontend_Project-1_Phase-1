@@ -6,21 +6,33 @@ body{
     segoe ui symbol;
     font-size: 16px;
     padding: 0;
-    box-sizing: border-box;
 }
+
+* {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+
 
 .shopping-cart{
     width: 25px;
     padding-top: 5%;
 }
 
-h1,h2,h3,h4,h5{
+h1,h3,h4,h5{
     font-family: sans-serif;
 }
 
-h3,h5{
+/* h3,h5{
     font-weight: normal;
-}
+} */
 
 nav{
     top:0;
@@ -60,7 +72,7 @@ nav a{
     color: black;
 }
 
-.span{
+.span {
     padding-top: 25px;
     white-space: nowrap;
 }
@@ -141,7 +153,7 @@ button[type="submit"]{
 
 /* header after navbar */
 
-.header {
+.top {
     position: inherit;
     display: flex;
     justify-content: space-around;
@@ -151,7 +163,7 @@ button[type="submit"]{
     background-color: #f8f9fb;
 }
 
-.headernav{
+.above{
     padding-bottom: 12.8px;
     padding-left: 11.2px;
     margin-top: -100px;
@@ -159,13 +171,14 @@ button[type="submit"]{
     height: 30%;
     width: 30%;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
-.headerphoto{
+.side{
     width: 640px;
 }
 
-.New-to-udemy{
+.inside{
     font-family: serif;
     font-size: 40px;
 }
@@ -173,8 +186,8 @@ button[type="submit"]{
 
 /* End of CSS header after navbar */
 
-/* Courses */
-.Courses{
+
+.selection-courses{
 padding: 25px;
 }
 
@@ -182,6 +195,8 @@ padding: 25px;
 display: flex;
 flex-wrap: wrap;
 }
+
+
 
 .title-above{
     padding-left: 50px;
@@ -205,16 +220,14 @@ padding:10px;
 color: gray;
 }
 
+.Courses-list-above a{
+    text-decoration: none;
+}
+
 .active{
 color: black !important;
 }
 
-.Courses-view{
-font-family: sans-serif;
-border: 1px solid rgb(187, 187, 187);
-padding: 10px;
-margin: 25px;
-}
 
 .header-of-Courses-view{
 width:55%;
@@ -233,86 +246,267 @@ font-weight: bold;
 color: gray
 }
 
-.Explore-button{
-font-weight: bold;
-padding:10px;
-margin: 10px 0;
-margin-left: 10px;
-cursor: pointer;
-border:1px solid black;
-background-color: white;
-color:black;
-}
 
-.first-course{
-display: flex;
-justify-content: space-evenly;
-flex-wrap: wrap;
-
-}
-
-
-.card-img{
-width: 345px;;
-border:1px solid rgb(214, 214, 214);
-}
-
-/*
-.card{
-margin:0 5px;
-width:249px;
-}
-
-*/
-
-.card{
-    justify-content: space-between;
-    margin: 0 5px;
-    width: 345px;
-    padding-bottom: 15px;
-}
-
-
-.card div{
-padding:5px 0 0 0;
-font-weight: bold;
-}
-
-.card .card-title{
-padding:10px 0 0 0;
-}
-
-
-h5{
+html {
     font-family: sans-serif;
-    padding:5px 0 0 0;
-}
-
-.card .card-author{
-font-size: 15px;
-color:gray;
-font-weight: 100;
+    font-size: 62.5%;
 }
 
 
 
-.checked {
-color: #f4c150;
+.main {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.students {
-color: gray;
-font-family: Arial, Helvetica, sans-serif;
+
+.courses {
+    margin-bottom: 6.4rem;
 }
 
-a {
-text-decoration: none;
-color: inherit;
+.courses-header {
+    padding: 0 2.4rem;
 }
 
-li {
-list-style: none;
+.courses-header-h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+    letter-spacing: -.05rem;
+    line-height: 1.25;
 }
+
+.courses-header-msg {
+    margin-top: 0.8rem;
+    max-width: 80rem;
+    font-size: 1.9rem;
+    line-height: 1.4;
+}
+
+.topics {
+    padding: 0 24px;
+    display: flex;
+    height: 48px;
+    overflow: hidden;
+}
+
+.topic-button {
+    background-color: white;
+    border-style: none;
+    color: #6a6f73;
+    margin-right: 16px;
+    min-width: fit-content;
+    padding: 0.8rem 0.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.6rem;
+}
+
+.categories{
+    display: none;
+}
+
+
+.topic-button:hover {
+    color: black;
+}
+
+.topic-button-active {
+    color: black;
+}
+
+.courses-content {
+    padding: 3.2rem;
+    border-width: 1px;
+    border-style: solid;
+    margin: 0 2.4rem;
+    border-color: #d1d7dc;
+}
+
+.courses-content-head h2 {
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.courses-content-head p {
+    max-width: 80rem;
+    margin-bottom: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1.6rem;
+}
+
+.courses-content-head {
+    margin-bottom: 3.2rem;
+}
+
+.gnrl-btn {
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    height: 4rem;
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+    min-width: 8rem;
+    padding: 0 1.2rem;
+    justify-content: center;
+    white-space: nowrap;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02rem;
+    font-size: 1.4rem;
+    margin-top: 1.6rem;
+}
+
+.gnrl-btn:hover {
+    background-color: rgba(0, 0, 0, .04);
+}
+
+
+.course-img{
+    border:1px solid rgb(214, 214, 214);
+}
+
+.course-item {
+    padding: 5px;
+    width: 330px;
+    display: inline-flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.course-item h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+    min-height: 3.8rem;
+    max-height: 3.8rem;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.author {
+    font-size: 1.rem;
+    color: #1c1d1f;
+    margin-bottom: 0.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-height: 1.68rem;
+}
+
+.star img {
+    height: 1.4rem;
+}
+
+.rating {
+    display: flex;
+    margin-bottom: 0.4rem;
+}
+
+.rating-score {
+    color: #b4690e;
+    font-weight: 700;
+    margin-right: 0.4rem;
+    font-size: 1.8rem;
+}
+
+.rating-n {
+    margin-left: 0.4rem;
+    font-size: 1.5rem;
+    color: #6a6f73;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.bestseller {
+    background-color: #eceb98;
+    color: #3d3c0a;
+    padding: 0.4rem 0.8rem;
+    display: inline-block;
+    width: fit-content;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: flex !important;
+}
+
+.carousel-control-prev {
+    background-color: black !important;
+    width: 4rem !important;
+    height: 4rem;
+    border-radius: 50%;
+    top: 16% !important;
+    left: -2% !important;
+}
+
+.carousel-control-next {
+    background-color: black !important;
+    width: 4rem !important;
+    height: 4rem;
+    border-radius: 50%;
+    top: 16% !important;
+    right: -2% !important;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+/* categories */
+
+.container h2{
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.categories-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    cursor: pointer;
+}
+
+.category{
+    display: grid;
+    place-content: center;
+    flex: 1;
+    margin: .5rem;
+}
+
+.category-title{
+    font-weight: 500;
+    margin-top: .5rem;
+}
+
+.category-img{
+    transition: transform 150ms ease-in;
+}
+
+
+.category-img:hover{
+    transform: scale(1.03);
+}
+
 
 /* End of courses css */
 
@@ -322,6 +516,7 @@ list-style: none;
     .shown1{
         display: none;
     }
+
 }
 
 @media screen and (max-width:1200px){
@@ -346,10 +541,6 @@ list-style: none;
     }
 
 
-
-    .first-course{
-        padding: 0;
-    }
 
     .header-of-Courses-view{
         width: 100%;
@@ -381,10 +572,29 @@ list-style: none;
         padding-left: 15%;
     }
 
+    .tab-pane-content .details{
+        width: 100%;
+    }
 }
 
 
 @media screen and (max-width: 750px) {
+
+    .container h2{
+        justify-content: center;
+        margin-left: 150px;
+    }
+
+
+    .topics{
+        display: block;
+        height: 70px;
+    }
+
+    .courses-content{
+        margin-top: 10px;
+    }
+
     .headerphoto{
         width: 100px;
     }
@@ -395,6 +605,10 @@ list-style: none;
 
     .header{
         margin: 0;
+    }
+
+    .tab-pane-content .details{
+        width: 100%;
     }
     
 }
