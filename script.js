@@ -1,5 +1,12 @@
-
 let url = "http://localhost:3000";
+
+
+let activeBtn = "btn-python"
+
+let globalData, filteredData;
+
+let nCourses = 5;
+
 
 const btns = {
     "btn-python": "python",
@@ -10,29 +17,7 @@ const btns = {
     "btn-aws": "aws",
     "btn-drawing": "draw"
 }
-let activeBtn = "btn-python"
 
-let globalData, filteredData;
-
-let nCourses = 5;
-
-const getStars = (n) => {
-    stars = "";
-    left = 5;
-    for (let i = 0; i < Math.floor(n); i++) {
-        stars += '<img  src="./img/star-full.png">'
-            --left;
-    }
-    if (Math.floor(n) != Math.round(n)) {
-        --left;
-        stars += '<img  src="./img/star-half.png">'
-    }
-    for (let i = 0; i < left; i++) {
-        stars += '<img  src="./img/star-empty.png">'
-    }
-    return stars
-
-}
 
 const courseItem = ({ title, instructors, image, price, rating, people, bestseller }) => {
 
@@ -56,6 +41,25 @@ const courseList = ({ data, active }) => {
     return `<div class = "courses-list carousel-item ${active?"active":""}" >
         ${data.join("\n")}
     </div>`
+}
+
+
+const getStars = (n) => {
+    stars = "";
+    left = 5;
+    for (let i = 0; i < Math.floor(n); i++) {
+        stars += '<img  src="./img/star-full.png">'
+            --left;
+    }
+    if (Math.floor(n) != Math.round(n)) {
+        --left;
+        stars += '<img  src="./img/star-half.png">'
+    }
+    for (let i = 0; i < left; i++) {
+        stars += '<img  src="./img/star-empty.png">'
+    }
+    return stars
+
 }
 
 const drawCourses = async() => {
@@ -138,8 +142,8 @@ const updateCat = async() => {
 const activateBtn = (btnId) => {
     const oldBtn = document.getElementById(activeBtn)
     const newBtn = document.getElementById(btnId)
-    oldBtn.classList.remove("topic-btn-active")
-    newBtn.classList.add("topic-btn-active")
+    oldBtn.classList.remove("topic-button-active")
+    newBtn.classList.add("topic-button-active")
     activeBtn = btnId;
 }
 
@@ -159,21 +163,6 @@ const changeNCourses = (n) => {
     drawCourses();
 }
 
-const mediaQuery = () => {
-    let screens = [
-        window.matchMedia("(min-width: 100px) and (max-width: 599px)"),
-        window.matchMedia("(min-width: 600px) and (max-width: 699px)"),
-        window.matchMedia("(min-width: 700px) and (max-width: 969px)"),
-        window.matchMedia("(min-width: 970px) and (max-width: 1199px)"),
-        window.matchMedia("(min-width: 1200px)")
-    ]
-    screens.forEach((screen, index) => {
-        screen.addListener((x) => { if (x.matches) changeNCourses(index + 1) });
-        if (screen.matches) changeNCourses(index + 1);
-    })
-}
-
-
 
 
 const main = async() => {
@@ -188,7 +177,6 @@ const main = async() => {
         e.preventDefault();
         searchCourses(searchInput.value)
     })
-    mediaQuery()
 }
 
 main()
